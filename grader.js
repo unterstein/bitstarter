@@ -88,6 +88,7 @@ if(require.main == module) {
           var checkJson = checkHtmlFile(result, program.checks);
           var outJson = JSON.stringify(checkJson, null, 4);
           console.log(outJson);
+          process.exit(0);
       });
     } else {
       var checkJson = checkHtmlFile(fs.readFileSync(program.file), program.checks);
